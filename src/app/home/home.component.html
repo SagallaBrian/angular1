@@ -1,0 +1,20 @@
+<div>
+    <h4 class="fw-normal text-danger">
+        Angular Framework Introduction
+    </h4>
+  
+    <table class="table">
+        <thead>
+            <tr class="text-success">
+                <th scope="col">Lessons</th>
+                <th scope="col">Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let info1 of receivedarrays" >
+                <td>{{info1.lessondesc}}</td>
+                <td><a routerLink="/{{info1.lessonlink}}" routerLinkActive="active">Click Here</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
