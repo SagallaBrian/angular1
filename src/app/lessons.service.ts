@@ -11,8 +11,22 @@ export class LessonsService {
         { "lessonlink": "tut4", "lessondesc": "Angular Forms" },
     ];
 
+    private listousers: { username: string, usremail: string, usrpass: string }[] = [
+        { "username": "Kevin", "usremail": "kevin@gmail", "usrpass": "kevpass" },
+    ];
+
     getinfo(): { lessonlink: string, lessondesc: string }[] {
         return this.arrayLessons;
+    }
+    getuserinfo(): { username: string, usremail: string, usrpass: string }[] {
+        return this.listousers;
+    }
+    addinfo(myparaam: any) {
+        let myobj: any = { "username": "tut5", "usremail": "Temporary Routee", "usrpass": "Introduction" };
+        myobj.username = myparaam.usrnameimp ;
+        myobj.usremail = myparaam.usremailimp ;
+        myobj.usrpass = myparaam.usrpassimp ;
+        this.listousers.push(myobj);
     }
 
     constructor() { }

@@ -1,0 +1,59 @@
+<div>
+    <div class="pb-4">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a routerLink="/tut4" routerLinkActive="active">Angular Forms</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                    Template Driven Implementation
+                </li>
+            </ol>
+        </nav>
+    </div>
+
+    <div>
+        <h4 class="fw-normal text-info">User Registration</h4>
+        <form #myvar="ngForm" (ngSubmit)="submit_fu(myvar)">
+            <div class="mb-3">
+                <label for="usfi" class="form-label">Username</label>
+                <input type="text" class="form-control" id="usfi" placeholder="User Name" name="usrnameimp"
+                    #myusername="ngModel" minlength="4" required ngModel />
+                <div *ngIf="myusername.invalid && (myusername.dirty || myusername.touched)"
+                    class="alert alert-danger my-3">
+                    <div *ngIf="myusername.errors?.required">
+                       User Name is required.
+                    </div> 
+                    <div *ngIf="myusername.errors?.minlength">
+                        Name must be at least 4 characters long.
+                    </div>
+                </div>
+
+            </div>
+            <div class="mb-3">
+                <label for="usema" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="usema" placeholder="name@example.com" name="usremailimp"
+                    required ngModel />
+            </div>
+            <div class="mb-3">
+                <label for="uspas" class="form-label">Password</label>
+                <input type="password" class="form-control" id="uspas" placeholder="Password" name="usrpassimp" required
+                    ngModel />
+            </div>
+            <div>
+                <button class="btn btn-info" type="submit">Submit form</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="py-4">
+        <h4 class="fw-normal text-success">List of Added users</h4>
+
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let userinfo of receivedarrays" >
+                {{userinfo.username}} /  {{userinfo.usremail}} /  {{userinfo.usrpass}}
+            </li>
+          </ul>
+
+    </div>
+</div>
