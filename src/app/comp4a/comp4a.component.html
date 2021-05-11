@@ -32,19 +32,22 @@
             </div>
             <div class="mb-3">
                 <label for="usema" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="usema" placeholder="name@example.com" name="usremailimp"
-                    required ngModel />
+                <input type="email" class="form-control" id="usema" placeholder="name@example.com" 
+                    name="usremailimp" required ngModel />
             </div>
             <div class="mb-3">
                 <label for="uspas" class="form-label">Password</label>
-                <input type="password" class="form-control" id="uspas" placeholder="Password" name="usrpassimp" required
+                <input type="password" class="form-control" id="uspas" placeholder="Password" 
+                name="usrpassimp" required
                     ngModel />
             </div>
             <div>
-                <button class="btn btn-info" type="submit">Submit form</button>
+                <button class="btn btn-info"  [disabled]="!myvar.valid" type="submit">Submit form</button>
             </div>
         </form>
     </div>
+
+    <div *ngIf="myformsubmitted" class="my-3 alert alert-success">Form Submitted Successfully</div>
 
     <div class="py-4">
         <h4 class="fw-normal text-success">List of Added users</h4>

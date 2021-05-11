@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { LessonsService } from "../lessons.service";
 
 
@@ -11,8 +12,9 @@ import { LessonsService } from "../lessons.service";
 })
 export class Comp4aComponent implements OnInit {
     receivedarrays: { username: string, usremail: string, usrpass: string }[] = [] ;
+    myformsubmitted:boolean = false ;
 
-    constructor(private myaddproo: LessonsService) {
+    constructor(private myaddproo: LessonsService, private router: Router) {
        this.receivedarrays = myaddproo.getuserinfo();
     }
 
@@ -27,7 +29,10 @@ export class Comp4aComponent implements OnInit {
             usrpassimp: string
         }
         let mydata: FormInterface = myformdata.form.value ;
-        this.myaddproo.addinfo(mydata)
+        this.myaddproo.addinfo(mydata);
+        myformdata.reset();
+        this.myformsubmitted = true ;
+        // this.router.navigate(['./tut4']);
     }
 
 }
