@@ -1,0 +1,27 @@
+<div class="px-2">
+    <h4 class="fw-normal text-info">
+        Attribute, class, and style bindings
+    </h4>
+    <p>
+        This enables the programmer set 
+        attributes, classes, and styles dynamically
+    </p>
+    <div>
+        <h5 class="fw-normal text-success">
+            Property binding         
+            <span class="small">(Adding a Single Property)</span>
+        </h5>
+        <div [class.text-danger]="spanclas1">The text-danger class added dynamically </div> 
+        <div [style.color]="colorvar" >The style color has been added dynamically. </div>
+    </div>
+
+    <div class="pt-4">
+        <h5 class="fw-normal text-success">
+            Map binding
+            <span class="small">(Adding Multiple Properties)</span>
+        </h5>
+        <div [class]="spanclas2"> Multiple classes added dynamically </div> 
+        <div [style]="colorvar2" >Multiple styles  added dynamically. </div>
+    </div>
+</div>
+

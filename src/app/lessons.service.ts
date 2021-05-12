@@ -9,6 +9,7 @@ export class LessonsService {
         { "lessonlink": "tut2", "lessondesc": "Introduction to Components" },
         { "lessonlink": "tut3", "lessondesc": "Services and dependency injections" },
         { "lessonlink": "tut4", "lessondesc": "Angular Forms" },
+        { "lessonlink": "tut5", "lessondesc": "Angular Attributes and Styling" },
     ];
 
     private listousers: { username: string, usremail: string, usrpass: string }[] = [
