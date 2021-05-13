@@ -21,6 +21,10 @@ import { Comp4aModule } from './comp4a/comp4a.module';
 import { Comp4bModule } from './comp4b/comp4b.module';
 import { Comp5Component } from './comp5/comp5.component';
 import { Comp6Component } from './comp6/comp6.component';
+import { Comp7Component } from './comp7/comp7.component';
+import { Comp7aComponent } from './comp7a/comp7a.component';
+import { Comp7bModule } from './comp7b/comp7b.module';
+// import { Comp7bComponent } from './comp7b/comp7b.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +37,9 @@ import { Comp6Component } from './comp6/comp6.component';
     Comp4Component,
     Comp5Component,
     Comp6Component,
+    Comp7Component,
+    Comp7aComponent,
+    // Comp7bComponent,
     // Comp4aComponent,
     // Comp4bComponent
   ],
@@ -40,7 +47,8 @@ import { Comp6Component } from './comp6/comp6.component';
     BrowserModule,
     AppRoutingModule,
     Comp4aModule,
-    Comp4bModule
+    Comp4bModule,
+    Comp7bModule
     // FormsModule 
   ],
   providers: [],

@@ -9,6 +9,8 @@ import { Comp4Component } from './comp4/comp4.component';
 import { Comp4aComponent } from './comp4a/comp4a.component';
 import { Comp4bComponent } from './comp4b/comp4b.component';
 import { Comp5Component } from './comp5/comp5.component';
+import { Comp6Component } from './comp6/comp6.component';
+import { Comp7Component } from './comp7/comp7.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
@@ -19,7 +21,9 @@ const routes: Routes = [
   {path:'tut4', component: Comp4Component},
   {path:'tut4a', component: Comp4aComponent},
   {path:'tut4b', component: Comp4bComponent},
-  {path:'tut5', component: Comp5Component}
+  {path:'tut5', component: Comp5Component},
+  {path:'tut6', component: Comp6Component},
+  {path:'tut7', component: Comp7Component},
 ];
 
 @NgModule({

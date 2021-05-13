@@ -1,0 +1,27 @@
+<div  class="py-2">
+    <h4 class="fw-normal text-primary">
+        @Input()
+    </h4>
+    <p>
+        The @Input() decorator in a child component or directive 
+        signifies that the property can receive its 
+        value from its parent component.
+    </p>
+    <app-comp7a mystatic="passing static data one"></app-comp7a>
+    <app-comp7a [mydynamic]="passdata"></app-comp7a>
+    <app-comp7a *ngFor="let myarritem of arraydata" [mydynamic]="myarritem"></app-comp7a>
+</div>
+
+<div class="py-3">
+    <h4 class="fw-normal text-primary">
+        @Output()
+    </h4>
+    <p>
+        The @Output() decorator in a child component or directive allows 
+        data to flow from the child to the parent.
+    </p>
+    <p>
+        The form adds items to array in the parents component
+    </p>
+    <app-comp7b (newItemEvent)="addItem($event)"></app-comp7b>
+</div>

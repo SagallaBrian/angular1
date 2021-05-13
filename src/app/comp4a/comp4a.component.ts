@@ -13,6 +13,7 @@ import { LessonsService } from "../lessons.service";
 export class Comp4aComponent implements OnInit {
     receivedarrays: { username: string, usremail: string, usrpass: string }[] = [] ;
     myformsubmitted:boolean = false ;
+    myval:string = '';
 
     constructor(private myaddproo: LessonsService, private router: Router) {
        this.receivedarrays = myaddproo.getuserinfo();

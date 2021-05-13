@@ -1,0 +1,17 @@
+<div>
+    <form [formGroup]="myprofileForm" (ngSubmit)="submit_fu2()">
+        <div class="mb-3">
+            <h5 class="fw-normal text-primary">Simple Reactive Form</h5>
+            <input type="text" class="form-control" placeholder="Start typing here ..." formControlName="myName"
+                required />
+            <p class="pt-3">
+                {{myprofileForm.controls.myName.value}}
+            </p>
+        </div>
+        <div>
+            <button class="btn btn-info" [disabled]="!myprofileForm.valid"  type="submit">
+                Submit form
+            </button>
+        </div>
+    </form>
+</div>

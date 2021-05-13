@@ -1,5 +1,57 @@
 <div>
-    <h4 class="fw-normal">
+    <h4 class="fw-normal text-primary">
         Built-in Directives
     </h4>
+    <div class="py-4">
+        <h5 class="fw-normal text-danger">
+            ngClass
+        </h5>
+        <div class="py-4">
+            <button [class.btn]="spanclas1" [class.btn-primary]="spanclas1" (click)="togclmethod()"> 
+                Toggle div color
+            </button>
+            <pre></pre>
+            <div [ngClass]="toglclas1 ? 'bg-success p-2 text-white' :
+            'bg-danger p-2 text-white'">
+                Class div would be Toggled
+            </div>
+    
+        </div>
+        <div class="py-4">
+            <button class="btn btn-success me-3" (click)="togltxtclassmethod()">
+                Toggle text-white class
+            </button>
+            <button class="btn btn-primary me-3" (click)="toglbgclassmethod()">
+                Toggle bg-succces class
+            </button>
+            <button class="btn btn-warning me-3" (click)="toglpadclassmethod()">
+                Toggle p-2 class
+            </button>
+            <button class="btn btn-info me-3" (click)="toglmagclassmethod()">
+                Toggle my-3 class
+            </button>
+    
+            <div  [ngClass]="myintialclasses">
+                The classes div changed individually
+            </div>
+        </div>
+    </div>
+    <div class="py-4">
+        <h5 class="fw-normal text-danger">
+            ngStyle
+        </h5>
+        <button class="btn btn-primary me-3" (click)="togitalistylmethod()">
+            Toggle Italic Styling
+        </button>
+        <button class="btn btn-warning me-3" (click)="togweigtstylmethod()">
+            Toggle font-weight Styling
+        </button>
+        <button class="btn btn-info me-3" (click)="togsizestylmethod()">
+            Toggle font-size Styling
+        </button>
+
+        <div  [ngStyle]="myintialstyles" class="bg-success text-white p-3 my-3">
+            The styles div changed individually
+        </div>
+    </div>
 </div>

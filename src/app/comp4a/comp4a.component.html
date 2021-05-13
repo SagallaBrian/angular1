@@ -31,6 +31,13 @@
 
             </div>
             <div class="mb-3">
+                <label for="usema" class="form-label">Two way binding</label>
+                <input type="text" class="form-control" required  name="twoway" [(ngModel)] ='myval' />
+                <div>
+                    {{myval}}
+                </div>
+            </div>
+            <div class="mb-3">
                 <label for="usema" class="form-label">Email address</label>
                 <input type="email" class="form-control" id="usema" placeholder="name@example.com" 
                     name="usremailimp" required ngModel />
