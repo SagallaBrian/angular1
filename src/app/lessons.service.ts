@@ -12,6 +12,7 @@ export class LessonsService {
         { "lessonlink": "tut5", "lessondesc": "Angular Attributes and Styling" },
         { "lessonlink": "tut6", "lessondesc": "Built in Directives" },
         { "lessonlink": "tut7", "lessondesc": "Sharing data: @Input() and @Output() " },
+        { "lessonlink": "tut8", "lessondesc": "Making Api Calls"},
     ];
 
     private listousers: { username: string, usremail: string, usrpass: string }[] = [

@@ -1,0 +1,16 @@
+
+
+<div>
+    <h4 class="fw-normal text-danger">
+        This data is from an api call 
+    </h4>
+
+</div>
+<div *ngFor="let mydataitem of mydataarray" class="py-3">
+    <img src="{{mydataitem.imgurl}}" alt="{{mydataitem.imgname}}}" class="img-fluid">
+    <pre></pre>
+    <ul class="list-group">
+        <li class="list-group-item">{{mydataitem.imgname}}</li>
+        <li class="list-group-item">{{mydataitem.imgsource}}</li>
+    </ul>
+</div>

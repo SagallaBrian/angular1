@@ -6,6 +6,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+// http modules 
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { HomeComponent } from './home/home.component';
 import { Comp1Component } from './comp1/comp1.component';
@@ -24,6 +27,7 @@ import { Comp6Component } from './comp6/comp6.component';
 import { Comp7Component } from './comp7/comp7.component';
 import { Comp7aComponent } from './comp7a/comp7a.component';
 import { Comp7bModule } from './comp7b/comp7b.module';
+import { Comp8Component } from './comp8/comp8.component';
 // import { Comp7bComponent } from './comp7b/comp7b.component';
 
 @NgModule({
@@ -39,6 +43,7 @@ import { Comp7bModule } from './comp7b/comp7b.module';
     Comp6Component,
     Comp7Component,
     Comp7aComponent,
+    Comp8Component,
     // Comp7bComponent,
     // Comp4aComponent,
     // Comp4bComponent
@@ -48,7 +53,8 @@ import { Comp7bModule } from './comp7b/comp7b.module';
     AppRoutingModule,
     Comp4aModule,
     Comp4bModule,
-    Comp7bModule
+    Comp7bModule,
+    HttpClientModule
     // FormsModule 
   ],
   providers: [],
